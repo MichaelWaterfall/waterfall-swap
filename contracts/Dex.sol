@@ -18,7 +18,8 @@ contract Dex {
         require(totalLiquidity == 0, "DEX already has liquidity");
         totalLiquidity = address(this).balance;
         liquidity[msg.sender] = totalLiquidity;
-        require(token.transferFrom(msg.sender, address(this), tokens));
+        //require(token.transferFrom(msg.sender, address(this), tokens));
+        require(token.transfer(msg.sender, tokens));
         return totalLiquidity;
 
     }

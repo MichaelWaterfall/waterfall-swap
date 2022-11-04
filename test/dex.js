@@ -5,6 +5,7 @@ const Dai = artifacts.require("mocks/Dai.sol");
 
 contract('Dex', (accounts) => {
     const [liquidityPoolDai] = [accounts[1]];
+
     it('should deploy contract', async () => {
         const dex = await Dex.deployed();
         assert(dex.address != '');
