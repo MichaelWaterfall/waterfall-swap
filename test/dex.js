@@ -16,5 +16,7 @@ contract('Dex', (accounts) => {
         await dex.init(1);
         const result = await dex.totalLiquidity(0);
         assert(result == 0);
+        
+
     });
 });
